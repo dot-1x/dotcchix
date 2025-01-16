@@ -1,3 +1,4 @@
+import About from "@/components/about"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 
 export default function Page() {
@@ -6,13 +7,33 @@ export default function Page() {
       className="h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center overflow-y-hidden"
       style={{ backgroundImage: "url('python.webp')" }}
     >
-      <div className="custom-size rounded-lg overflow-y-hidden overflow-x-auto bg-custom-black/[96%]">
-        <Tabs defaultValue="dotcchix" className="h-full dark">
-          <TabsList>
-            <TabsTrigger value="dotcchix">dotcchix</TabsTrigger>
-            <TabsTrigger value="about">About</TabsTrigger>
-            <TabsTrigger value="projects">Projects</TabsTrigger>
-            <TabsTrigger value="contact">Contact</TabsTrigger>
+      <main className="custom-size rounded-lg overflow-y-hidden overflow-x-auto bg-custom-black/[96%] hover:cursor-default">
+        <Tabs defaultValue="dotcchix" className="h-full">
+          <TabsList className="xl:w-[35%] w-full inline-flex h-9 items-center justify-center text-white p-1 font-firacode">
+            <TabsTrigger
+              value="dotcchix"
+              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium data-[state=active]:text-[var(--py-blue)] hover:text-[var(--py-blue)]"
+            >
+              hello.friends
+            </TabsTrigger>
+            <TabsTrigger
+              value="about"
+              className="px-3 transition-all data-[state=active]:border-b-2 border-[var(--py-blue)] w-full mx-auto inline-flex items-center justify-center font-medium data-[state=active]:text-python-yellow hover:text-python-yellow"
+            >
+              about.me
+            </TabsTrigger>
+            <TabsTrigger
+              value="projects"
+              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium data-[state=active]:text-[var(--py-blue)] hover:text-[var(--py-blue)]"
+            >
+              projects.py
+            </TabsTrigger>
+            <TabsTrigger
+              value="contact"
+              className="px-3 transition-all data-[state=active]:border-b-2 border-[var(--py-blue)] w-full mx-auto inline-flex items-center justify-center  font-medium data-[state=active]:text-python-yellow hover:text-python-yellow"
+            >
+              contact.md
+            </TabsTrigger>
           </TabsList>
           <TabsContent
             value="dotcchix"
@@ -20,24 +41,22 @@ export default function Page() {
           >
             <div className="flex flex-col justify-between mb-10">
               <p className="text-3xl">
-                Greetings! my name is{" "}
-                <span className="text-[var(--py-yellow)]">Zex.</span>
+                Greetings! I am <span className="text-python-yellow">Zex.</span>
               </p>
               <p className="text-xl">
-                People also call me by:{" "}
-                <span className="text-[var(--py-yellow)]">
-                  dotcchix / dot1x
-                </span>
+                Also known as{"\n"}
+                <span className="text-python-yellow">dotcchix || dot1x</span>
               </p>
             </div>
           </TabsContent>
-          <TabsContent value="about" className="text-[var(--py-blue)] flex">
-            <div className="m-5">
-              <p>3rd year undergraduate student of Informathics</p>
-            </div>
+          <TabsContent
+            value="about"
+            className="text-[var(--py-blue)] flex h-full data-[state=inactive]:h-[0]"
+          >
+            <About />
           </TabsContent>
         </Tabs>
-      </div>
+      </main>
     </div>
   )
 }

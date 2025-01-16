@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,7 +10,8 @@
   --py-yellow: #ffd43b;
   --py-green: #4b8bbe;
   --py-white: #ffffff;
-  --py-dark: #1e1e1e;
+  --py-dark: #010c15;
+  --py-purple: #ae00ff;
 }
 .custom-size {
   @apply md:w-[calc(100vw-2.5rem)] md:h-[calc(100vh-2.5rem)] w-[calc(100vw-2rem)] h-[calc(100vh-2rem)];
