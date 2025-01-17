@@ -15,6 +15,7 @@ export default {
       colors: {
         python: {
           yellow: "var(--py-yellow)",
+          dark: "var(--py-dark)",
         },
         custom: {
           black: "#101419",

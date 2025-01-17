@@ -7,13 +7,17 @@ import Bio from "./profile/bio"
 
 export default function About() {
   return (
-    <div className="my-2 w-full flex font-firacode h-[90%]">
+    <div className="my-2 w-full flex h-[90%]">
       <ResizablePanelGroup direction="horizontal">
         <ResizablePanel defaultSize={50}>
           <div className="px-5">
             <div className="flex flex-col justify-between">
               <h1 className="text-5xl">Who Am I?</h1>
               <p>Click the tabs below to know about me</p>
+              <p>
+                Use the <span className="text-python-yellow">Slider</span> to
+                expand the main tab
+              </p>
             </div>
             <Bio />
           </div>

@@ -12,25 +12,25 @@ export default function Page() {
           <TabsList className="xl:w-[35%] w-full inline-flex h-9 items-center justify-center text-white p-1 font-firacode">
             <TabsTrigger
               value="dotcchix"
-              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium data-[state=active]:text-[var(--py-blue)] hover:text-[var(--py-blue)]"
+              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-[var(--py-blue)]"
             >
               hello.friends
             </TabsTrigger>
             <TabsTrigger
               value="about"
-              className="px-3 transition-all data-[state=active]:border-b-2 border-[var(--py-blue)] w-full mx-auto inline-flex items-center justify-center font-medium data-[state=active]:text-python-yellow hover:text-python-yellow"
+              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-python-yellow"
             >
               about.me
             </TabsTrigger>
             <TabsTrigger
               value="projects"
-              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium data-[state=active]:text-[var(--py-blue)] hover:text-[var(--py-blue)]"
+              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-[var(--py-blue)]"
             >
               projects.py
             </TabsTrigger>
             <TabsTrigger
               value="contact"
-              className="px-3 transition-all data-[state=active]:border-b-2 border-[var(--py-blue)] w-full mx-auto inline-flex items-center justify-center  font-medium data-[state=active]:text-python-yellow hover:text-python-yellow"
+              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center  font-medium hover:text-python-yellow"
             >
               contact.md
             </TabsTrigger>

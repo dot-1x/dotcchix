@@ -32,25 +32,25 @@ function DynamicTime() {
 
 export default function Bio() {
   return (
-    <Tabs className="mt-4">
+    <Tabs className="mt-4 font-firacode">
       <TabsList className="flex flex-row">
         <TabsTrigger
           value="personal"
-          className="group transition-all pr-4 flex flex-row gap-x-2 data-[state=active]:text-white data-[state=active]:bg-[var(--py-dark)]"
+          className="group transition-all pr-4 flex flex-row gap-x-2 data-[state=active]:text-white data-[state=active]:bg-[var(--py-dark)] hover:bg-python-dark"
         >
           <LogsIcon className="group-data-[state=active]:text-green-300" />
           <span>personal.log</span>
         </TabsTrigger>
         <TabsTrigger
-          value="school"
-          className="group transition-all px-4 flex flex-row gap-x-2 data-[state=active]:text-white data-[state=active]:bg-[var(--py-dark)]"
+          value="roadmap"
+          className="group transition-all px-4 flex flex-row gap-x-2 data-[state=active]:text-white data-[state=active]:bg-[var(--py-dark)] hover:bg-python-dark"
         >
           <LogsIcon className="group-data-[state=active]:text-green-300" />
-          school.log
+          roadmap.log
         </TabsTrigger>
         <TabsTrigger
           value="interest"
-          className="group transition-all px-4 flex flex-row gap-x-2 data-[state=active]:text-white data-[state=active]:bg-[var(--py-dark)]"
+          className="group transition-all px-4 flex flex-row gap-x-2 data-[state=active]:text-white data-[state=active]:bg-[var(--py-dark)] hover:bg-python-dark"
         >
           <LogsIcon className="group-data-[state=active]:text-green-300" />
           interest.log
@@ -58,7 +58,7 @@ export default function Bio() {
       </TabsList>
       <TabsContent
         value="personal"
-        className="bg-[var(--py-dark)] data-[state=active]:p-3 flex flex-col gap-3"
+        className="bg-[var(--py-dark)] data-[state=active]:p-3 flex flex-col gap-2"
       >
         <LogStyle logname="PERSONAL" logtype="INFO">
           Hello, I'm <span className="text-python-yellow">Nizar. </span>
@@ -80,18 +80,36 @@ export default function Bio() {
         </LogStyle>
       </TabsContent>
       <TabsContent
-        value="school"
-        className="bg-[var(--py-dark)] data-[state=active]:p-3 flex flex-col gap-3"
+        value="roadmap"
+        className="bg-python-dark data-[state=active]:p-3 flex flex-col gap-2"
       >
-        <LogStyle logname="SCHOOL" logtype="INFO">
+        <LogStyle logname="ROADMAP" logtype="INFO">
           I went to{" "}
           <span className="text-python-yellow">Vocational High School</span>{" "}
           majoring <span className="text-python-yellow">Computer</span> and{" "}
           <span className="text-python-yellow">Networking</span>
         </LogStyle>
-        <LogStyle logname="SCHOOL" logtype="INFO">
+        <LogStyle logname="ROADMAP" logtype="INFO">
+          start learning programming since{" "}
+          <span className="text-python-yellow">grade 10th,</span> I was so bad
+          back then...
+        </LogStyle>
+        <LogStyle logname="ROADMAP" logtype="INFO">
+          Luckily, my school provides free online courses on{" "}
+          <span className="text-python-yellow">Progate</span> starting grade
+          11th
+        </LogStyle>
+        <LogStyle logname="ROADMAP" logtype="INFO">
+          That is where I start to focus on programming, specially{" "}
+          <span className="underline decoration-white">
+            Py
+            <span className="text-python-yellow">thon</span>
+          </span>
+        </LogStyle>
+        <LogStyle logname="ROADMAP" logtype="INFO">
           now third-year{" "}
-          <span className="text-python-yellow">Informathics</span> student
+          <span className="text-python-yellow">Informathics</span> bachelor
+          student
         </LogStyle>
       </TabsContent>
     </Tabs>
