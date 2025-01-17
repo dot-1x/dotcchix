@@ -2,7 +2,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LogsIcon } from "lucide-react"
 import React, { useEffect, useState } from "react"
-import LogStyle from "@/components/ui/logstyle"
+import { LogStyle, LogParent } from "@/components/ui/logstyle"
 
 function DynamicTime() {
   const [localTime, setLocalTime] = useState(new Date())
@@ -60,57 +60,102 @@ export default function Bio() {
         value="personal"
         className="bg-[var(--py-dark)] data-[state=active]:p-3 flex flex-col gap-2"
       >
-        <LogStyle logname="PERSONAL" logtype="INFO">
-          Hello, I'm <span className="text-python-yellow">Nizar. </span>
-          my IRL friends often call me{" "}
-          <span className="text-python-yellow">Zar.</span>
-        </LogStyle>
-        <LogStyle logname="PERSONAL" logtype="INFO">
-          If you know me from the internet, you probably know me as
-          <span className="text-python-yellow"> Zex.</span> ||{" "}
-          <span className="text-python-yellow">dotcchix.</span> as I have stated
-          before
-        </LogStyle>
-        <LogStyle logname="PERSONAL" logtype="INFO">
-          I Live in <span className="text-python-yellow">Indonesia, </span>
-          my local time is: <DynamicTime />
-        </LogStyle>
-        <LogStyle logname="PERSONAL" logtype="INFO">
-          I'm <span className="text-python-yellow">XX </span>Years old
-        </LogStyle>
+        <LogParent>
+          <LogStyle logname="PERSONAL" logtype="INFO">
+            Hello, I'm <span className="text-python-yellow">Nizar. </span>
+            my IRL friends often call me{" "}
+            <span className="text-python-yellow">Zar.</span>
+          </LogStyle>
+          <LogStyle logname="PERSONAL" logtype="INFO">
+            If you know me from the internet, you probably know me as
+            <span className="text-python-yellow"> Zex.</span> ||{" "}
+            <span className="text-python-yellow">dotcchix.</span> as I have
+            stated before
+          </LogStyle>
+          <LogStyle logname="PERSONAL" logtype="INFO">
+            I Live in <span className="text-python-yellow">Indonesia, </span>
+            my local time is: <DynamicTime />
+          </LogStyle>
+          <LogStyle logname="PERSONAL" logtype="INFO">
+            I'm <span className="text-python-yellow">XX </span>Years old
+          </LogStyle>
+        </LogParent>
       </TabsContent>
       <TabsContent
         value="roadmap"
         className="bg-python-dark data-[state=active]:p-3 flex flex-col gap-2"
       >
-        <LogStyle logname="ROADMAP" logtype="INFO">
-          I went to{" "}
-          <span className="text-python-yellow">Vocational High School</span>{" "}
-          majoring <span className="text-python-yellow">Computer</span> and{" "}
-          <span className="text-python-yellow">Networking</span>
-        </LogStyle>
-        <LogStyle logname="ROADMAP" logtype="INFO">
-          start learning programming since{" "}
-          <span className="text-python-yellow">grade 10th,</span> I was so bad
-          back then...
-        </LogStyle>
-        <LogStyle logname="ROADMAP" logtype="INFO">
-          Luckily, my school provides free online courses on{" "}
-          <span className="text-python-yellow">Progate</span> starting grade
-          11th
-        </LogStyle>
-        <LogStyle logname="ROADMAP" logtype="INFO">
-          That is where I start to focus on programming, specially{" "}
-          <span className="underline decoration-white">
-            Py
-            <span className="text-python-yellow">thon</span>
-          </span>
-        </LogStyle>
-        <LogStyle logname="ROADMAP" logtype="INFO">
-          now third-year{" "}
-          <span className="text-python-yellow">Informathics</span> bachelor
-          student
-        </LogStyle>
+        <LogParent>
+          <LogStyle logname="ROADMAP" logtype="INFO">
+            I went to{" "}
+            <span className="text-python-yellow">Vocational High School</span>{" "}
+            majoring <span className="text-python-yellow">Computer</span> and{" "}
+            <span className="text-python-yellow">Networking</span>
+          </LogStyle>
+          <LogStyle logname="ROADMAP" logtype="INFO">
+            start learning programming since{" "}
+            <span className="text-python-yellow">grade 10th,</span> I was so bad
+            back then...
+          </LogStyle>
+          <LogStyle logname="ROADMAP" logtype="INFO">
+            Luckily, my school provides free online courses on{" "}
+            <span className="text-python-yellow">Progate</span> starting grade
+            11th
+          </LogStyle>
+          <LogStyle logname="ROADMAP" logtype="INFO">
+            That is where I start to focus on programming, specially{" "}
+            <span className="underline decoration-white">
+              Py
+              <span className="text-python-yellow">thon</span>
+            </span>
+          </LogStyle>
+          <LogStyle logname="ROADMAP" logtype="INFO">
+            now third-year{" "}
+            <span className="text-python-yellow">Informatics </span>
+            student
+          </LogStyle>
+        </LogParent>
+      </TabsContent>
+      <TabsContent
+        value="interest"
+        className="bg-python-dark data-[state=active]:p-3 flex flex-col gap-2"
+      >
+        <LogParent>
+          <LogStyle logname="INTEREST/DEVELOPMENT" logtype="INFO">
+            my main interest is developing on{" "}
+            <span className="text-python-yellow">
+              back-end API, Automation, and making BOT
+            </span>
+          </LogStyle>
+          <LogStyle logname="INTEREST/DEVELOPMENT" logtype="INFO">
+            currently learning{" "}
+            <span className="text-python-yellow">Machine Learning</span> at my
+            college
+          </LogStyle>
+          <LogStyle logname="INTEREST/GAMES" logtype="INFO">
+            my interest in gaming used to be{" "}
+            <span className="text-python-yellow">FPS</span> game
+          </LogStyle>
+          <LogStyle logname="INTEREST/GAMES" logtype="INFO">
+            but, I <span className="text-red-300">stopped</span> since I had no
+            time to grind them rank
+          </LogStyle>
+          <LogStyle logname="INTEREST/GAMES" logtype="INFO">
+            for now, I more like <span className="text-rose-400">Anime</span>{" "}
+            themed game such as{" "}
+            <span className="text-rose-400">
+              Genshin Impact, Wuthering Waves, AK: Endfield, Honkai: Star Rail,
+              etc
+            </span>
+          </LogStyle>
+          <LogStyle
+            logname="INTEREST/GAMES"
+            logtype="INFO"
+            className="!delay-1s"
+          >
+            specially Genshin Impact (yes I trapped in this game)
+          </LogStyle>
+        </LogParent>
       </TabsContent>
     </Tabs>
   )

@@ -1,5 +1,6 @@
 import About from "@/components/about"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+import Link from "next/link"
 
 export default function Page() {
   return (
@@ -39,13 +40,23 @@ export default function Page() {
             value="dotcchix"
             className="text-[var(--py-blue)] flex items-center justify-center max-w-7xl mx-auto h-full data-[state=inactive]:h-[0]"
           >
-            <div className="flex flex-col justify-between mb-10">
+            <div className="flex flex-col justify-between">
               <p className="text-3xl">
                 Greetings! I am <span className="text-python-yellow">Zex.</span>
               </p>
               <p className="text-xl">
                 Also known as{"\n"}
                 <span className="text-python-yellow">dotcchix || dot1x</span>
+              </p>
+              <p className="mt-9 text-2xl font-firacode">
+                {">"} find me on{" "}
+                <Link
+                  className="text-blue-600"
+                  href="https://discord.com/users/732842920889286687"
+                  target="blank"
+                >
+                  discord
+                </Link>
               </p>
             </div>
           </TabsContent>

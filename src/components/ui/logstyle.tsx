@@ -1,7 +1,32 @@
 "use client"
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
+import React from "react"
 
-export default function LogStyle({
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15, // Stagger delay between children
+    },
+  },
+}
+
+// Variants for each item
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+}
+
+export function LogParent({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div animate="visible" initial="hidden" variants={containerVariants}>
+      {children}
+    </motion.div>
+  )
+}
+export function LogStyle({
   children,
   logname,
   logtype,
@@ -14,7 +39,7 @@ export default function LogStyle({
 }) {
   const staticTime = new Date()
   return (
-    <p className={cn(className)}>
+    <motion.div className={cn(className)} variants={itemVariants}>
       <span>
         [<span className="text-white">{logname}</span> |{" "}
         <span className="text-green-300">{logtype}</span>]{" "}
@@ -26,6 +51,6 @@ export default function LogStyle({
           hour12: false,
         })}
       </span>
-    </p>
+    </motion.div>
   )
 }
