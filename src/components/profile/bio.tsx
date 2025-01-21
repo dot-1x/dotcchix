@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react"
 import { LogStyle, LogParent } from "@/components/ui/logstyle"
 
 function DynamicTime() {
-  const [localTime, setLocalTime] = useState(new Date())
+  const [_, setLocalTime] = useState(new Date())
   const [utcPlus7Time, setUtcPlus7Time] = useState(new Date())
 
   useEffect(() => {
@@ -62,13 +62,13 @@ export default function Bio() {
       >
         <LogParent>
           <LogStyle logname="PERSONAL" logtype="INFO">
-            Hello, I'm <span className="text-python-yellow">Nizar. </span>
+            Hello, {"I'm"} <span className="text-python-blue">Nizar. </span>
             my IRL friends often call me{" "}
             <span className="text-python-yellow">Zar.</span>
           </LogStyle>
           <LogStyle logname="PERSONAL" logtype="INFO">
             If you know me from the internet, you probably know me as
-            <span className="text-python-yellow"> Zex.</span> ||{" "}
+            <span className="text-python-blue"> Zex.</span> ||{" "}
             <span className="text-python-yellow">dotcchix.</span> as I have
             stated before
           </LogStyle>
@@ -77,7 +77,7 @@ export default function Bio() {
             my local time is: <DynamicTime />
           </LogStyle>
           <LogStyle logname="PERSONAL" logtype="INFO">
-            I'm <span className="text-python-yellow">XX </span>Years old
+            {"I'm"} young years old :D
           </LogStyle>
         </LogParent>
       </TabsContent>
@@ -89,7 +89,7 @@ export default function Bio() {
           <LogStyle logname="ROADMAP" logtype="INFO">
             I went to{" "}
             <span className="text-python-yellow">Vocational High School</span>{" "}
-            majoring <span className="text-python-yellow">Computer</span> and{" "}
+            majoring <span className="text-python-blue">Computer</span> and{" "}
             <span className="text-python-yellow">Networking</span>
           </LogStyle>
           <LogStyle logname="ROADMAP" logtype="INFO">
@@ -104,7 +104,7 @@ export default function Bio() {
           </LogStyle>
           <LogStyle logname="ROADMAP" logtype="INFO">
             That is where I start to focus on programming, specially{" "}
-            <span className="underline decoration-white">
+            <span className="underline decoration-white text-python-blue">
               Py
               <span className="text-python-yellow">thon</span>
             </span>
@@ -148,12 +148,9 @@ export default function Bio() {
               etc
             </span>
           </LogStyle>
-          <LogStyle
-            logname="INTEREST/GAMES"
-            logtype="INFO"
-            className="!delay-1s"
-          >
-            specially Genshin Impact (yes I trapped in this game)
+          <LogStyle logname="INTEREST/GAMES" logtype="INFO">
+            specially <span className="text-rose-400">Genshin Impact</span> (yes
+            I trapped in this game)
           </LogStyle>
         </LogParent>
       </TabsContent>

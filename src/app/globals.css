@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 :root {
-  --py-blue: #306998;
+  --py-blue: #1e88e5;
   --py-yellow: #ffd43b;
   --py-green: #4b8bbe;
   --py-white: #ffffff;
@@ -81,4 +81,21 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* For Chrome/Safari */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6dee1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8bbbf;
 }

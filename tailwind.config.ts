@@ -14,6 +14,7 @@ export default {
     extend: {
       colors: {
         python: {
+          blue: "var(--py-blue)",
           yellow: "var(--py-yellow)",
           dark: "var(--py-dark)",
         },
@@ -90,6 +91,18 @@ export default {
         "fluid-fill": "fluid-fill 0.5s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      scrollbar: {
+        DEFAULT: {
+          thumb: {
+            width: "2px", // Set scrollbar width
+          },
+        },
+        thin: {
+          thumb: {
+            width: "2px",
+          },
+        },
       },
     },
   },

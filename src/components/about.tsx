@@ -4,12 +4,12 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable"
 import Bio from "./profile/bio"
-
+import Experience from "./profile/experience"
 export default function About() {
   return (
     <div className="my-2 w-full flex h-[90%]">
       <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel defaultSize={50}>
+        <ResizablePanel defaultSize={25}>
           <div className="px-5">
             <div className="flex flex-col justify-between">
               <h1 className="text-5xl">Who Am I?</h1>
@@ -23,9 +23,10 @@ export default function About() {
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={25}>
-          <div className="flex items-center flex-col justify-between">
+        <ResizablePanel defaultSize={50}>
+          <div className="flex items-center flex-col justify-between overflow-y-auto h-full">
             <h1 className="text-5xl">Experience?</h1>
+            <Experience />
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />

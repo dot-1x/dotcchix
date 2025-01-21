@@ -39,7 +39,7 @@ export function LogStyle({
 }) {
   const staticTime = new Date()
   return (
-    <motion.div className={cn(className)} variants={itemVariants}>
+    <motion.div className={cn("text-white", className)} variants={itemVariants}>
       <span>
         [<span className="text-white">{logname}</span> |{" "}
         <span className="text-green-300">{logtype}</span>]{" "}

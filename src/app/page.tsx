@@ -5,40 +5,40 @@ import Link from "next/link"
 export default function Page() {
   return (
     <div
-      className="h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center overflow-y-hidden"
+      className="h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-center"
       style={{ backgroundImage: "url('python.webp')" }}
     >
-      <main className="custom-size rounded-lg overflow-y-hidden overflow-x-auto bg-custom-black/[96%] hover:cursor-default">
+      <main className="custom-size rounded-lg overflow-hidden bg-custom-black/[96%] hover:cursor-default">
         <Tabs defaultValue="dotcchix" className="h-full">
-          <TabsList className="xl:w-[35%] w-full inline-flex h-9 items-center justify-center text-white p-1 font-firacode">
+          <TabsList className="flex flex-col mb-5 md:mb-0 md:flex-row xl:w-[35%] w-full inline-flex h-9 items-center justify-center text-white p-1 font-firacode">
             <TabsTrigger
               value="dotcchix"
-              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-[var(--py-blue)]"
+              className="transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-python-blue"
             >
               hello.friends
             </TabsTrigger>
             <TabsTrigger
               value="about"
-              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-python-yellow"
+              className="transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-python-yellow"
             >
               about.me
             </TabsTrigger>
             <TabsTrigger
               value="projects"
-              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-[var(--py-blue)]"
+              className="transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-python-blue"
             >
               projects.py
             </TabsTrigger>
             <TabsTrigger
               value="contact"
-              className="px-3 transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center  font-medium hover:text-python-yellow"
+              className="transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center  font-medium hover:text-python-yellow"
             >
               contact.md
             </TabsTrigger>
           </TabsList>
           <TabsContent
             value="dotcchix"
-            className="text-[var(--py-blue)] flex items-center justify-center max-w-7xl mx-auto h-full data-[state=inactive]:h-[0]"
+            className="text-python-blue flex items-center justify-center max-w-7xl mx-auto"
           >
             <div className="flex flex-col justify-between">
               <p className="text-3xl">
@@ -48,22 +48,31 @@ export default function Page() {
                 Also known as{"\n"}
                 <span className="text-python-yellow">dotcchix || dot1x</span>
               </p>
-              <p className="mt-9 text-2xl font-firacode">
-                {">"} find me on{" "}
-                <Link
-                  className="text-blue-600"
-                  href="https://discord.com/users/732842920889286687"
-                  target="blank"
-                >
-                  discord
-                </Link>
-              </p>
+              <ul className="mt-9 text-2xl font-firacode">
+                <li>
+                  {">"} find me on{" "}
+                  <Link
+                    className="text-python-yellow"
+                    href="https://discord.com/users/732842920889286687"
+                    target="blank"
+                  >
+                    discord
+                  </Link>
+                </li>
+                <li>
+                  {">"} visit my{" "}
+                  <Link
+                    className="text-python-yellow"
+                    href="https://github.com/dot-1x"
+                    target="blank"
+                  >
+                    GitHub
+                  </Link>
+                </li>
+              </ul>
             </div>
           </TabsContent>
-          <TabsContent
-            value="about"
-            className="text-[var(--py-blue)] flex h-full data-[state=inactive]:h-[0]"
-          >
+          <TabsContent value="about" className="flex text-white">
             <About />
           </TabsContent>
         </Tabs>
