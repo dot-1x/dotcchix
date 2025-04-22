@@ -9,7 +9,7 @@ export default function Experience() {
           {
             subtitle: "Roadmap",
             description:
-              "This was my first language I learned when I was at grade 11th and one my favorite language" +
+              "This was my first language I learned and one of my main language" +
               "\nI learn this language from Progate website I mentioned earlier",
           },
           {
@@ -30,11 +30,26 @@ export default function Experience() {
           {
             subtitle: "Experience",
             description:
-              "First time I learned typescript was around 2022, not deep dive into it",
+              "First time I learned typescript was around 2022, not deep dive into it" +
+              "\n but actively using it since then",
           },
           {
             subtitle: "Main Use",
             description: "I mainly use typescript to develop mini web app",
+          },
+        ]}
+      />
+      <Markdown
+        title="Sourcepawn"
+        fields={[
+          {
+            subtitle: "Experience",
+            description:
+              "only focusing for a year (2021), used to make a SourceMod plugin for my server",
+          },
+          {
+            subtitle: "Main Use",
+            description: "Plugin for my CS:GO Community Server",
           },
         ]}
       />
@@ -44,9 +59,18 @@ export default function Experience() {
           {
             subtitle: "First mentoring",
             description:
-              "The first time I mentored someone/people was in my 2nd year of college" +
-              "\nWith theme of 'Developing portofolio website using Next'" +
-              "\nI was with help of my friend to mentor people",
+              "The first time I mentored people was in my 2nd year of college" +
+              "\nWith theme of 'Developing portofolio website using Next'",
+          },
+        ]}
+      />
+      <Markdown
+        title="Source Level Design"
+        fields={[
+          {
+            subtitle: "Experience",
+            description:
+              "i don't know why I put this in, but, i've had experience of making map for cs:go and cs:source around 2020 - 2021",
           },
         ]}
       />

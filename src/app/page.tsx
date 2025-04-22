@@ -1,4 +1,5 @@
 import About from "@/components/about"
+import Projects from "@/components/projects"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import Link from "next/link"
 
@@ -10,7 +11,7 @@ export default function Page() {
     >
       <main className="custom-size rounded-lg overflow-hidden bg-custom-black/[96%] hover:cursor-default">
         <Tabs defaultValue="dotcchix" className="h-full">
-          <TabsList className="flex flex-col mb-5 md:mb-0 md:flex-row xl:w-[35%] w-full inline-flex h-9 items-center justify-center text-white p-1 font-firacode">
+          <TabsList className="flex flex-col md:flex-row xl:w-[35%] w-full inline-flex items-center justify-center text-white p-1 font-firacode">
             <TabsTrigger
               value="dotcchix"
               className="transition-all data-[state=active]:border-b-2 border-python-yellow w-full mx-auto inline-flex items-center justify-center font-medium hover:text-python-blue"
@@ -72,8 +73,11 @@ export default function Page() {
               </ul>
             </div>
           </TabsContent>
-          <TabsContent value="about" className="flex text-white">
+          <TabsContent value="about" className="text-white">
             <About />
+          </TabsContent>
+          <TabsContent value="projects" className="text-white">
+            <Projects />
           </TabsContent>
         </Tabs>
       </main>
